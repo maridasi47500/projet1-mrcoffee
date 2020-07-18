@@ -1,0 +1,89 @@
+html, body, header, nav {
+ margin:0;
+ padding:0;
+ text-align:center;
+ }
+body {
+  font-family: Arial, Helvetica, sans-serif, Verdana;
+}
+ul > li > a {
+    font-weight: 900;
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    
+}
+.navbar > * {
+    display: inline-block;
+    *display:inline;
+}
+nav {
+     padding: 10px;
+     background-color:grey;
+     min-height:50px;
+}
+
+nav > .navbar {
+     margin: 0 auto;
+     padding:0 auto;
+     max-height:70%;
+
+} 
+.navbar > .logo {
+    float:left;
+    margin:0;
+    padding:0;
+              text-align:center;
+}
+.navbar > .entries-nav {
+    float:right;
+    padding-right:50px;
+
+}
+
+.entries-nav > .naventry {
+    display: inline-block;
+    margin: 0 30px 0 30px;
+    padding:0 auto;
+    //zoom:1;
+    *display:inline;
+}
+.naventry > .logonav {
+    max-height:50px;
+    padding-left: 50px;
+
+}
+.navbar > .nav-el {
+      list-style-type: none;
+      padding: 0 auto;
+}
+header > nav {
+    height:50px;
+}
+footer > nav {
+    height:100px;
+}
+
+
+nav > * {
+    color:white;
+}
+.naventry > .logobottom {
+max-height:100px;
+}
+nav > ul {
+    max-height:50px;
+}
+span > a > img {
+    max-height:30px;
+    padding: 0 30px 0 30px;
+}
+
+nav > .center {
+  float:none;
+  //margin: auto;
+  text-align:center;
+  width: 50%;
+  border: 3px solid green;
+  //padding: 10px;
+} 
