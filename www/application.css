@@ -13,10 +13,6 @@ ul > li > a {
     font-size:15px;
     
 }
-.navbar > * {
-    display: inline-block;
-    *display:inline;
-}
 nav {
      padding: 10px;
      background-color:grey;
@@ -24,16 +20,18 @@ nav {
 }
 
 nav > .navbar {
-     margin: 0 auto;
-     padding:0 auto;
      max-height:70%;
+     text-align:center;
+       position: relative;
 
 } 
 .navbar > .logo {
-    float:left;
-    margin:0;
-    padding:0;
-              text-align:center;
+   position: absolute;
+   margin:0;
+   padding:0;
+   left:0;
+   /* vertically center the icon */
+   top: 50%; transform: translateY(-50%);
 }
 .navbar > .entries-nav {
     float:right;
@@ -55,7 +53,6 @@ nav > .navbar {
 }
 .navbar > .nav-el {
       list-style-type: none;
-      padding: 0 auto;
 }
 header > nav {
     height:50px;
@@ -79,11 +76,8 @@ span > a > img {
     padding: 0 30px 0 30px;
 }
 
-nav > .center {
-  float:none;
-  //margin: auto;
-  text-align:center;
-  width: 50%;
-  border: 3px solid green;
-  //padding: 10px;
+.navbar > .center {
 } 
+.logotop.logo.nav-el  {
+   transform:translateY(0%);
+}
