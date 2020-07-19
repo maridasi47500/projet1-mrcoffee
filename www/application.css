@@ -1,4 +1,4 @@
-html, body, header, nav,section {
+html, body, header, nav,section,article {
  margin:0;
  padding:0;
  text-align:center;
@@ -9,10 +9,13 @@ body {
 img {
     height:100%;
 }
+a {
+    text-decoration:none;
+}
+a:visited { text-decoration: none; }
 ul > li > a {
     font-weight: 900;
     color:white;
-    text-decoration:none;
     font-size:15px;
     
 }
@@ -110,20 +113,22 @@ section {
 
 }
 article {
-     margin: 0;
-     width: 50%;
-     padding:0 0 30px 0;
-     text-align:left;
+     padding: 0 50px;
      max-height:700px;
+     display:inline;
 }
-#map {
-    width:100%;
-    height:500px;
+.aboutarticles {
+    padding:0 30px;
 }
-
 .about {
-    width:100%;
+    display:inline-block;
+
+    width:90%;
     overflow:hidden;
+    text-align:left;
+    margin:0 auto;
+    padding:0 auto;
+
 }
 .troiscafe {
     float:right;
@@ -131,18 +136,21 @@ article {
     max-height:700px;
     margin:0;
     padding:0;
-    padding-left:150px;
+    margin-left:150px;
     height:100%;
 }
 h2 {
     font-weight:normal;
 }
-.about > p,.about > h2  {
+.about > *  {
     padding-top: 20px;
+}
+.about:last-of-type {
+    margin-bottom:50px;
 }
 .salle {
     float:left;
-    padding: 0 40px 0 0 ;
+    margin: 0 40px 0 0 ;
     max-width: 45%;
 }
 .welcome {
@@ -164,8 +172,10 @@ background-repeat: no-repeat;
     font-weight:900;
     margin:0;
     padding:0;
-    padding-top:10px;
 
+}
+.subtitle {
+    margin:50px 0;
 }
 .cartes {
     width:100%;
@@ -202,17 +212,83 @@ background-repeat: no-repeat;
 margin: 0 2%;
 padding:0;
 }
-
+.bouton {
+     padding: 30px;
+}
 .ensavoirplus {
-    height:60px;
+         margin: 40px auto;
     color:white;
-    font-weight:500;
     font-size:20px;
-    padding: 0 auto;
-    background-color:darkgrey;
+        width:200px;
+
+     background-color:#a8beff;
+    font-weight:900;
+    border-radius:20px;
+    padding-block:30px;
+    display:inline-block;
+    width:500px;
+}
+.openings {
+    text-align:left;
+}
+.openings > p > b {
+    padding-left: 30px;
+}
+.img-openings {
+    max-height:60px;
+    vertical-align:middle;
+}
+.programme {
+    text-align:center;
+    display:inline-block;
+}
+.programme > * {
+    width:50%;
+}
+.programme > * > p:last-of-type {
+    padding: 30px 0;
+}
+.mardi {
+    float:left;
+}
+.jeudi {
+    float:right;
 
 }
-div.ensavoirplus {
-    height:100%;
-    width:150px;
+.findepage {
+     padding: 30px;
+}
+.findepage > p {
+         margin: 40px auto;
+         width:50%;
+}
+.findepage > p:last-of-type {
+    padding-top:30px;
+    font-size:25px;
+}
+.infospratiques {
+    padding:0 30px;
+}
+.infospratiques > * {
+             margin: 0px auto;
+
+    text-align:left;
+    
+    width:50%;
+}
+.map {
+    padding:0 30px;
+            width:100%;
+}
+#map {
+             width:50%;
+    height:500px;
+    padding-bottom:50px;
+
+}
+.contact {
+    padding-bottom:40px;
+}
+.rdvcontact:visited {
+    color:black;
 }
