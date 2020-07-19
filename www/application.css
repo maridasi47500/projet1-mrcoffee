@@ -4,7 +4,10 @@ html, body, header, nav {
  text-align:center;
  }
 body {
-  font-family: Arial, Helvetica, sans-serif, Verdana;
+  font-family:"DejaVu Sans",Times, Georgia, serif;
+}
+img {
+    height:100%;
 }
 ul > li > a {
     font-weight: 900;
@@ -35,7 +38,7 @@ nav > .navbar {
 }
 .navbar > .entries-nav {
     float:right;
-    padding-right:50px;
+    //padding-right:50px;
 
 }
 
@@ -80,4 +83,39 @@ span > a > img {
 } 
 .logotop.logo.nav-el  {
    transform:translateY(0%);
+}
+.navbar > .centercontent {
+   position: absolute;
+   margin:0;
+   padding:0;
+   right:0;
+   /* vertically center the icon */
+   top: 50%; 
+   transform: translateY(-50%);
+   padding-right:50px;
+}
+.header-logo{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:150px;
+}
+.messagetitle {
+    font-size:30px;
+    font-weight:normal;
+}
+
+section {
+     padding: 30px;
+
+}
+article {
+     margin: 0 auto;
+     width: 50%;
+     padding-top:30px;
+     text-align:left;
+}
+#map {
+    width:100%;
+    height:500px;
 }
