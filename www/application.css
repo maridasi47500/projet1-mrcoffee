@@ -1,4 +1,4 @@
-html, body, header, nav {
+html, body, header, nav,section {
  margin:0;
  padding:0;
  text-align:center;
@@ -112,7 +112,7 @@ section {
 article {
      margin: 0;
      width: 50%;
-     padding-top:0;
+     padding:0 0 30px 0;
      text-align:left;
      max-height:700px;
 }
@@ -138,9 +138,81 @@ h2 {
     font-weight:normal;
 }
 .about > p,.about > h2  {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .salle {
     float:left;
-    padding: 0 80px 0 0 ;
+    padding: 0 40px 0 0 ;
+    max-width: 45%;
+}
+.welcome {
+    background-image:url(./assets/mr_coffee_salle.jpg);
+    background-size: cover;
+background-repeat: no-repeat;
+    height:700px;
+    width:100%;
+    color:white;
+    text-align:center;
+    text-shadow: -2px 2px 6px black;
+    font-weight:900;
+    font-size:40px;
+    padding-top:150px;
+    
+}
+.subtitle > p {
+    font-size:30px;
+    font-weight:900;
+    margin:0;
+    padding:0;
+    padding-top:10px;
+
+}
+.cartes {
+    width:100%;
+    height:350px;
+
+}
+.carte {
+    float:left;
+    height:100%;
+    width: calc(96%/3);
+    background-color:#c5e4ee;
+    overflow:hidden;
+    color:white;
+}
+
+
+.carte > p {
+    padding:0 40px 0 40px;
+}
+.carte > p > img {
+    max-width:25%;
+}
+.carte > .titre-carte {
+    text-shadow: -2px 2px 3px grey;
+    font-weight:900;
+    font-size:20px;
+}
+.carte > .contenu-carte {
+    font-size:20px;
+    font-weight:500;
+}
+
+.cartemilieu {
+margin: 0 2%;
+padding:0;
+}
+
+.ensavoirplus {
+    height:60px;
+    color:white;
+    font-weight:500;
+    font-size:20px;
+    padding: 0 auto;
+    background-color:darkgrey;
+
+}
+div.ensavoirplus {
+    height:100%;
+    width:150px;
 }
