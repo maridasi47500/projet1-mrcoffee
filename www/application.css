@@ -64,7 +64,7 @@ nav > .navbar {
       list-style-type: none;
 }
 header > nav {
-    height:50px;
+    height:60px;
 }
 footer > nav {
     height:100px;
@@ -390,7 +390,7 @@ padding:0;
           width:100%;
       }
       footer > nav {
-          height:150px;
+          height:100px;
       }
 /*       .naventry > .logonav {
          visibility: hidden;
