@@ -10,16 +10,15 @@ body {
 img {
     height:100%;
 }
-a {
-    text-decoration:none;
-}
-a:visited { text-decoration: none; }
-ul > li > a {
+a , a:link , a:visited, a:hover, a:active { text-decoration: none; color:black; }
+
+ul > li > a, ul > li > a:link , ul > li > a:visited, ul > li > a:hover, ul > li > a:active {
     font-weight: 900;
     color:white;
     font-size:15px;
     
 }
+/*header*/
 nav {
      padding: 10px;
      background-color:grey;
@@ -30,6 +29,7 @@ nav > .navbar {
      max-height:70%;
      text-align:center;
        position: relative;
+       padding:10px;
 
 } 
 .navbar > .logo {
@@ -43,19 +43,21 @@ nav > .navbar {
 .navbar > .entries-nav {
     float:right;
     //padding-right:50px;
-
+    //text-align: center;
 }
 
-.entries-nav > .naventry {
-    display: inline-block;
-    margin: 0 30px 0 30px;
-    padding:0 auto;
-    //zoom:1;
-    *display:inline;
+.nav-el > p {
+    color:white;
+}
+.naventry {
+    display:inline;
+    padding-right:50px;//elements du menu en ligne, pas en colonne
+
 }
 .naventry > .logonav {
     max-height:50px;
     padding-left: 50px;
+    
 
 }
 .navbar > .nav-el {
@@ -73,7 +75,7 @@ nav > * {
     color:white;
 }
 .naventry > .logobottom {
-max-height:100px;
+max-height:50px;
 }
 nav > ul {
     max-height:50px;
@@ -104,6 +106,7 @@ span > a > img {
     margin-right: auto;
     height:150px;
 }
+/*toutes pages*/
 .messagetitle {
     font-size:30px;
     font-weight:normal;
@@ -114,10 +117,11 @@ section {
 
 }
 article {
-     padding: 0 50px;
+     padding: 0;
      max-height:700px;
      display:inline;
 }
+/*about*/
 .aboutarticles {
     padding:0 30px;
 }
@@ -137,7 +141,9 @@ article {
     max-height:700px;
     margin:0;
     padding:0;
-    margin-left:150px;
+    margin-left:40px;
+
+    padding-left:40px;
     height:100%;
 }
 h2 {
@@ -153,7 +159,10 @@ h2 {
     float:left;
     margin: 0 40px 0 0 ;
     max-width: 45%;
+    padding-left:0px;
+
 }
+/*index*/
 .welcome {
     background-image:url(./assets/mr_coffee_salle.jpg);
     background-size: cover;
@@ -244,7 +253,7 @@ padding:0;
     display:inline-block;
 }
 .programme > * {
-    width:50%;
+    width:45%;
 }
 .programme > * > p:last-of-type {
     padding: 30px 0;
@@ -277,6 +286,7 @@ padding:0;
     
     width:50%;
 }
+/*contact*/
 .map {
     padding:0 30px;
             width:100%;
@@ -293,17 +303,116 @@ padding:0;
 .rdvcontact:visited {
     color:black;
 }
-@media only screen and (max-width: 767px) {
-  /* For tablets: */
+
+@media only screen and (max-width: 768px) {
+    /* For tablets: */
+    .logonav {
+         visibility: visible;
+      }
+
+    .about {
+        width:95%;
+    }
+    .header-logo {
+        height:100px; /*initial : 150px*/
+    }
+
+    header > .header-logo > img { 
+        display: inline;/*initial : 150px*/
+              margin:0;
+      padding:0;
+
+        margin-left: auto;
+        margin-right: auto;
+        width:100px;
+        height:100px;
+    }
+    /*index*/
+    .about > * {
+        padding:0;
+    }
+    
+    .imagecafe {
+        padding-left:40px;
+    }
+    .salle {
+        padding-left:0px;
+    }
+    section {
+        padding:0 50px 0px 50px;
+    }
+    .programme > * {
+        width:48%;
+    }
+    .carte > .contenu-carte {
+        font-size:17px;
+    }
+
+    .carte > p {
+        padding:0 10px 0 10px;
+    }
+    .cartes {
+        height:400px;
+    }
+    /*contact*/
+    .map {
+        width:revert;
+        padding:0 50px;
+    }
+    .infospratiques > *, #map {
+        width:80%;
+    }
+/*       .naventry > .logonav {
+         visibility: visible;
+      }*/
+
 }
-@media only screen and (max-width: 599px) {
+   @media only screen and (max-width: 730px) {
+
+       header > nav {
+           height:100px;
+       }
+           nav > .navbar {
+        max-height:100%;
+        padding:0;
+    }
+
+       nav > * {
+           float:revert;
+         height:400px;
+         display:inline-block;
+         width:100%;
+      }
+      .navbar > .entries-nav {
+          float:revert;
+      }
+      .logotop {
+          width:100%;
+      }
+      footer > nav {
+          height:150px;
+      }
+/*       .naventry > .logonav {
+         visibility: hidden;
+      }*/
+   }
+@media only screen and (max-width: 600px) {
   /* For mobile phones: */
 html, body, header, nav,section,article {
  margin:0;
  padding:0;
  text-align:center;
  }
- 
+/*       .naventry > .logonav {
+         visibility: visible;
+      }*/
+
+ .naventry {
+    display:revert;
+    padding-right:revert; //repositionner elements du menu en colonne
+
+}
+
  
 img {
     clear: both; float: left; display: block; position: relative;
@@ -314,13 +423,9 @@ body {
   font-family:"DejaVu Sans",Times, Georgia, serif;
 }
 footer > nav {
-    height:500px;
+    height:150px;
 }
 
-a {
-    text-decoration:none;
-}
-a:visited { text-decoration: none; }
 
   header > nav {
       height:200px;
@@ -340,7 +445,9 @@ ul > li > a {
     color:white;
     font-size:15px;
     display:inline-block;
-    padding-bottom: 30px;
+    padding: 0 auto;
+    height:auto;
+    padding-bottom:10px;
 }
 nav {
      padding: 10px;
@@ -349,13 +456,23 @@ nav {
 }
 span > a > img {
     height:30px;
-    width:calc(90%/3);
+    width:30px;
     padding:0;
 } 
-.follow {
-    display:inline;
-    float:none;
+header > p {
+    text-align:center;
+    display:inline-block;
+    max-width: 50%;
 }
+/*contact*/
+
+.infospratiques > * {
+
+    text-align:center;
+    width:80%;
+    
+}
+
 .map {
     padding:0 0px;
             width:100%;
@@ -367,6 +484,7 @@ span > a > img {
     padding-bottom:50px;
 
 }
+/*index*/
 .cartes {
     height:420px;
 }
@@ -386,6 +504,11 @@ span > a > img {
     margin:0 auto;
 
 }
+.carte > .contenu-carte {
+    font-size:20px;
+    font-weight:500;
+}
+
 article {
     padding: 15px;
     margin:15px;
@@ -394,16 +517,18 @@ article {
     position:relative;
     float:left;
 }
+.center {
+    float:revert;
+}
 p.naventry > a {
     display:block;
     padding: 0 0;
 }
-nav > .navbar {
-    padding:20px;
-    
-}
 .naventry > .logonav {
     padding-left: revert;
+    width:revert;
+    display:inline;
+
 }
 ul.nav-el {
     width:60%;
@@ -421,7 +546,7 @@ ul.nav-el {
     float:none;
     padding:0;
     list-style-type: none;
-    width:100%;
+    width:50%;
     display:inline-block;
     padding-bottom:30px;
 }
@@ -435,28 +560,14 @@ ul.nav-el {
     max-width:revert;
 }
 .about {
+    width:90%;
     display:inline;
-}
-.twitter {
-    padding:0 5%;
-    
-}
-.logobottom {
-        width:60px;
-
-}
-header > p {
-    text-align:center;
-    display:inline-block;
-}
-.header-logo{
-    width:50%;
 }
 .ensavoirplus {
     width:100%;
 }
 .img-openings {
-    width:50%;
+    width:revert;
 }
 .jeudi {
     float:left;
@@ -465,11 +576,61 @@ header > p {
 .programme > * {
     width:100%;
 }
-.openings > p > b {
-    padding-left:5px;
+.openings {
+    text-align:center;
 }
+.openings > p > b {
+    padding-left:0px;
+}
+/*about*/
+.about > *  {
+    padding-top: 20px;
+}
+
+/* footer*/
+
+.twitter {
+    padding:0 5%;
+    
+}
+.logobottom {
+        width:60px;
+
+}
+
 .cartemilieu {
     margin-right:revert;
     margin-left:revert;
 }
+.navbar > .entries-nav {
+    width:revert;
+}
+ul.nav-el {
+    width:revert;
+}
+.follow {
+    display:inline;
+    float:none;
+}
+
+.suiveznous {
+    width:50%;
+}
+.nav-el > p {
+    margin:20px auto;
+}
+p.header-logo > img {
+    width:revert;
+    float:revert;
+    display:inline;
+              margin:revert;
+      padding:revert;
+
+        height:revert;
+    }
+
+}
+
+.imagecafe {
+    padding-left:revert;
 }
