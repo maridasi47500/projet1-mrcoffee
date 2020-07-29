@@ -8,7 +8,7 @@ body {
   font-family:"DejaVu Sans",Times, Georgia, serif;
 }
 img {
-    height:100%;
+    max-height:150px;
 }
 a , a:link , a:visited, a:hover, a:active { text-decoration: none; color:black; }
 
@@ -105,6 +105,7 @@ span > a > img {
     margin-left: auto;
     margin-right: auto;
     height:150px;
+    width:150px;
 }
 /*toutes pages*/
 .messagetitle {
@@ -113,13 +114,12 @@ span > a > img {
 }
 
 section {
-     padding: 0 50px 150px 50px;
+     padding-bottom: 150px;
 
 }
 article {
-     padding: 0;
-     max-height:700px;
-     display:inline;
+     padding-right: 50px;
+     padding-left: 50px;
 }
 /*about*/
 .aboutarticles {
@@ -189,7 +189,7 @@ background-repeat: no-repeat;
 }
 .cartes {
     width:100%;
-    height:350px;
+    height:400px;
 
 }
 .carte {
@@ -270,7 +270,6 @@ padding:0;
 }
 .findepage > p {
          margin: 40px auto;
-         width:50%;
 }
 .findepage > p:last-of-type {
     padding-top:30px;
@@ -289,7 +288,7 @@ padding:0;
 /*contact*/
 .map {
     padding:0 30px;
-            width:100%;
+            //width:100%;
 }
 #map {
              width:50%;
@@ -310,11 +309,8 @@ padding:0;
          visibility: visible;
       }
 
-    .about {
-        width:95%;
-    }
     .header-logo {
-        height:100px; /*initial : 150px*/
+        height:150px; /*initial : 150px*/
     }
 
     header > .header-logo > img { 
@@ -324,8 +320,8 @@ padding:0;
 
         margin-left: auto;
         margin-right: auto;
-        width:100px;
-        height:100px;
+        width:150px;
+        height:150px;
     }
     /*index*/
     .about > * {
@@ -334,25 +330,29 @@ padding:0;
     
     .imagecafe {
         padding-left:40px;
+	max-height:500px;
     }
     .salle {
         padding-left:0px;
-    }
-    section {
-        padding:0 50px 0px 50px;
     }
     .programme > * {
         width:48%;
     }
     .carte > .contenu-carte {
-        font-size:17px;
+        font-size:24px;
     }
 
     .carte > p {
         padding:0 10px 0 10px;
     }
     .cartes {
-        height:400px;
+        height:revert;
+    }
+    .carte {
+        height:revert;
+        padding:revert;
+        width:revert;
+        margin:10px 150px;
     }
     /*contact*/
     .map {
@@ -365,7 +365,9 @@ padding:0;
 /*       .naventry > .logonav {
          visibility: visible;
       }*/
-
+article {
+    max-height:revert;
+}
 }
    @media only screen and (max-width: 730px) {
 
@@ -400,14 +402,20 @@ padding:0;
   /* For mobile phones: */
 html, body, header, nav,section,article {
  margin:0;
- padding:0;
  text-align:center;
  }
 /*       .naventry > .logonav {
          visibility: visible;
       }*/
+    section {
+        padding:0 5px 0px 5px;
+    }
+article {
+     padding-right: 0px;
+     padding-left: 0px;
+     }
 
- .naventry {
+.naventry {
     display:revert;
     padding-right:revert; //repositionner elements du menu en colonne
 
@@ -423,7 +431,7 @@ body {
   font-family:"DejaVu Sans",Times, Georgia, serif;
 }
 footer > nav {
-    height:150px;
+    height:170px;
 }
 
 
@@ -485,6 +493,9 @@ header > p {
 
 }
 /*index*/
+.bouton {
+	padding:0;
+}
 .cartes {
     height:420px;
 }
@@ -509,10 +520,6 @@ header > p {
     font-weight:500;
 }
 
-article {
-    padding: 15px;
-    margin:15px;
-}
 .navbar > * {
     position:relative;
     float:left;
@@ -620,17 +627,33 @@ ul.nav-el {
     margin:20px auto;
 }
 p.header-logo > img {
-    width:revert;
+    width:150px;
     float:revert;
     display:inline;
               margin:revert;
       padding:revert;
 
-        height:revert;
+        height:150px;
     }
 
-}
+
 
 .imagecafe {
     padding-left:revert;
+}
+.welcome {
+	font-size:30px;
+	padding-top:50px;
+	height:150px;
+}
+.messagetitle {
+	font-size:revert;
+}
+
+.aboutarticles {
+    padding:0 2px;
+}
+.messagetitle {
+    display:inline-block;
+}
 }
