@@ -31,7 +31,57 @@
             </nav>
             <p class="header-logo"><img alt="Mr Coffee" src="./assets/logo_mrcoffee.png" /></p>
         </header>
-        <main>            
+        <main> 
+                
+    
+    
+    
+            <section>
+                <div id="overlay">
+                    <div id="text">
+                        <p class="logodark">
+                            <img src="./assets/logo_dark.png" class="logobottom logonav" />
+                        <h2>MERCI !</h2>
+                        <h2>Votre message a bien été envoyé !</h2>
+                        <p>Nous essaierons d'y répondre au mieux dans les plus brefs délais. A bientôt chez Mr.Coffee !</p>
+                        <p id="fermer"><a href="#" onclick="off();return false">FERMER</a></p>
+                    </div>
+                </div>
+            </section>
+            <section class="formulaire">
+                <article class="formulaire1">
+                    <form action="#" method="post" onsubmit="dontreload();return false">
+                        <div class="form-example">
+                        <label for="nom">Nom *</label>
+                        <input type="text" name="nom" id="nom" required>
+                    </div>
+                    <div class="form-example">
+                        <label for="prenom">Prénom *</label>
+                        <input type="text" name="prenom" id="prenom" required>
+                    </div>
+                    <div class="form-example">
+                        <label for="email">E-mail *</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-example">
+                        <label for="telephone">Téléphone</label>
+                        <input pattern="[0-9]{10}" type="tel" name="telephone" id="telephone">
+                        <small>Format: 1234567890</small>
+                    </div>
+                    <div class="form-example">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="20" cols="33" required>
+                        </textarea>
+                    </div>
+                           
+
+                    <div class="form-example">
+                        <input type="submit" value="ENVOYER">
+                    </div>
+                </form>
+                </article>
+
+            </section>
             <section class="contact">
                 <h1 class='messagetitle'>On vous attend !</h1><!-- un seul h1-->
                 <article class="infospratiques">
@@ -71,5 +121,6 @@
                 </div>
             </nav>
         </footer>
+        <script src="./form.js"></script>
     </body>
 </html>

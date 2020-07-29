@@ -10,6 +10,94 @@ body {
 img {
     max-height:150px;
 }
+.form-example > *:last-child {
+        margin-bottom:10px;
+
+}
+.adresse > * {
+    height:10px;
+    position:relative;
+    clear:both;
+}
+/*formulaire*/
+.form-example > * {
+    float:left;
+    width:100%;
+    text-align:left;
+}
+.form-example > *:last-child:not(small), input[type=tel]{
+    background-color:lightgrey;
+    height:40px;
+    font-size:20px;
+    
+    
+}
+/*overlay*/
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:75%;
+  background-color:white;
+  font-size: 50px;
+  color: black;
+  border:1px solid black;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#text > *:not(.logodark):not(#fermer) {
+    padding:0px 200px 40px 200px;
+}
+#text > h2 {
+    font-size:24px;
+    padding:0 0 30px 0px;
+    margin:0;
+}
+#text > p {
+    font-size:18px;
+    text-align:left;
+}
+#text > h2:last-of-type {
+    
+    padding-bottom:50px;
+}
+
+#text > p > img {
+    float:left;
+    margin-left:100px;
+    width:60px;
+}
+#fermer {
+    padding:20px 60px 20px 60px;
+
+    display:inline-block;
+    
+    background-color:darkgrey;
+    border-radius:10px;
+}
+#fermer > a {
+        font-size:30px;
+    margin:0 auto;
+        color:white;
+  margin: 10px;
+}
 a , a:link , a:visited, a:hover, a:active { text-decoration: none; color:black; }
 
 ul > li > a, ul > li > a:link , ul > li > a:visited, ul > li > a:hover, ul > li > a:active {
@@ -42,8 +130,6 @@ nav > .navbar {
 }
 .navbar > .entries-nav {
     float:right;
-    //padding-right:50px;
-    //text-align: center;
 }
 
 .nav-el > p {
@@ -111,6 +197,7 @@ span > a > img {
 .messagetitle {
     font-size:30px;
     font-weight:normal;
+    clear:both;
 }
 
 section {
@@ -275,12 +362,11 @@ padding:0;
     padding-top:30px;
     font-size:25px;
 }
-.infospratiques {
+.infospratiques, .formulaire1 {
     padding:0 30px;
 }
-.infospratiques > * {
+.infospratiques > *, .formulaire1 > * {
              margin: 0px auto;
-
     text-align:left;
     
     width:50%;
@@ -288,7 +374,6 @@ padding:0;
 /*contact*/
 .map {
     padding:0 30px;
-            //width:100%;
 }
 #map {
              width:50%;
@@ -304,6 +389,25 @@ padding:0;
 }
 
 @media only screen and (max-width: 768px) {
+    #text {
+        top:0;
+        left:0;
+        width:revert;
+        height:100vh;
+        transform:revert;
+        overflow:scroll;
+        
+        padding:0;
+        position:relative;
+        text-align:center;
+        flex-direction:column;
+    }
+    #text > * {
+        float:left;
+        display:block;
+        clear:both;
+        
+    }
     /* For tablets: */
     .logonav {
          visibility: visible;
@@ -360,7 +464,7 @@ padding:0;
         width:revert;
         padding:0 50px;
     }
-    .infospratiques > *, #map {
+    .infospratiques > *, #map, .formulaire1 > * {
         width:80%;
     }
 /*       .naventry > .logonav {
@@ -481,7 +585,7 @@ header > p {
 }
 /*contact*/
 
-.infospratiques > * {
+.infospratiques > *, .formulaire1 > * {
 
     text-align:center;
     width:80%;
