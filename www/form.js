@@ -2,15 +2,13 @@ window.onload = function(){
 };
     function dontreload(){
             var formulaire = document.getElementsByClassName("form-example");
-
+var erreurs = [];
     for(var j = 0;j < (formulaire.length-1) ; j++) {
         if (formulaire[j].children[1].validity.typeMismatch) {
-        window.validiteformulaire = false;
-      } else {
-        window.validiteformulaire = true;
-      }
+        erreurs.push("erreur");
+        }
     }
-    if (window.validiteformulaire) {
+    if (erreurs.length === 0) {
         var infos = {};
         var info;
         var champ = document.getElementsByClassName("form-example");

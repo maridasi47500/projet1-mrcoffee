@@ -392,21 +392,36 @@ padding:0;
     #text {
         top:0;
         left:0;
+        
         width:revert;
         height:100vh;
         transform:revert;
         overflow:scroll;
         
-        padding:0;
         position:relative;
         text-align:center;
         flex-direction:column;
+        padding-top:30px;
     }
     #text > * {
-        float:left;
+        float:revert;
         display:block;
         clear:both;
-        
+    }
+    #text > *:not(.logodark):not(#fermer) {
+        padding:10px 15px 10px 15px;
+        text-align:center;
+    }
+    #text > p > img {
+        float:none;
+        margin-left:auto;
+    }
+    #text > p {
+        text-align:center;
+    }
+    #fermer {
+        margin:20px;
+
     }
     /* For tablets: */
     .logonav {
