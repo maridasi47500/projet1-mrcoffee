@@ -354,6 +354,7 @@ padding:0;
         width:revert;
         margin:10px 150px;
     }
+    
     /*contact*/
     .map {
         width:revert;
@@ -378,12 +379,18 @@ article {
         max-height:100%;
         padding:0;
     }
-
+    .navbar > .logo {
+        position: revert;
+    }
        nav > * {
            float:revert;
          height:400px;
          display:inline-block;
          width:100%;
+      }
+      .carte {
+                  margin:revert;
+
       }
       .navbar > .entries-nav {
           float:revert;
